@@ -1,3 +1,5 @@
+import os
+
 import requests
 from bs4 import BeautifulSoup as bs
 from datetime import datetime
@@ -6,9 +8,10 @@ import re
 import time
 from discord import Webhook, RequestsWebhookAdapter
 import tabulate
+import os
 
 
-webhook = Webhook.from_url(WEBHOOK_URL, adapter=RequestsWebhookAdapter())
+webhook = Webhook.from_url(os.environ['WEBHOOK_URL'], adapter=RequestsWebhookAdapter())
 
 url = requests.get(
     'https://www.collectorscache.com/catalog/pokemon_sealed_products-pokemon_booster_boxes/386?filter_by_stock=in-stock')
