@@ -1,10 +1,10 @@
-name: Discord Webhook
+name: Discord Bot
 
 # 'on' is the trigger, in this case this Action will
 # be triggered using cron set at a 10 minutes interval.
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/1 * * * *'
 
 # 'jobs' are the routines, we only have
 # one when the instance is built.
