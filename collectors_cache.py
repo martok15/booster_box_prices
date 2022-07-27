@@ -8,8 +8,8 @@ from discord import Webhook, RequestsWebhookAdapter
 import tabulate
 import os
 
-
-webhook = Webhook.from_url(os.environ['WEBHOOK_URL'], adapter=RequestsWebhookAdapter())
+webhook_url = os.environ['WEBHOOK_URL']
+webhook = Webhook.from_url(webhook_url, adapter=RequestsWebhookAdapter())
 
 url = requests.get(
     'https://www.collectorscache.com/catalog/pokemon_sealed_products-pokemon_booster_boxes/386?filter_by_stock=in-stock')
