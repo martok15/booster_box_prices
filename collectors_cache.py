@@ -1,5 +1,3 @@
-import os
-
 import requests
 from bs4 import BeautifulSoup as bs
 from datetime import datetime
